@@ -7,9 +7,9 @@ COPY wildfly-8.2.0.Final /opt/wildfly
 # install example app on wildfy
 COPY wildfly-spring-boot-sample-1.0.0.war /opt/wildfly/standalone/deployments/
 
-RUN apt update
-RUN apt-get install dos2unix 
-RUN dos2unix /opt/wildfly/bin/standalone.sh
+# RUN apt update
+# RUN apt-get install dos2unix 
+# RUN dos2unix /opt/wildfly/bin/standalone.sh
 
 
 RUN java -version
@@ -20,4 +20,4 @@ EXPOSE 8080 9990 9090
 
 # Set the default command to run on boot
 # This will boot WildFly in the standalone mode and bind to all interface
-CMD ["/opt/wildfly/bin/standalone.sh", "-c", "standalone-full.xml", "-b", "0.0.0.0"]
+CMD ["/opt/wildfly/bin/standalone.bat", "-c", "standalone-full.xml", "-b", "0.0.0.0"]
