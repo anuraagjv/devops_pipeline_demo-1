@@ -1,4 +1,4 @@
-FROM servergurus/ubuntu-jdk8
+FROM pivotalservices/jdk8-minimal
 MAINTAINER Prasanjit Singh <nixgurus@gmail.com>
 
 # setup WildFly 
